@@ -3,12 +3,12 @@ pipeline {
     
        
     stages {
-        stage('Stage 1') {
+        stage('say hello') {
             steps {
                 echo 'Hello man!' 
             }
         }
-      stage('Stage 2') {
+      stage('scp files') {
             steps {
                 sshagent (credentials: ['user_hard']) {
                 //sh 'ssh -o StrictHostKeyChecking=no user@172.31.116.110 uname -a'
